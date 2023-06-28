@@ -1,0 +1,45 @@
+Form Website
+
+
+PSEUDOCODE FOR FORM
+
+#Asking User for name
+IF name == NONE
+  ASK USER TO INPUT NAME
+ELSE END IF (IF USER HAS ENTERED NAME)
+
+ #ASK USER TO INPUT SURNAME
+ IF surname == NONE
+    ASK USER TO INPUT SURNAME
+ ELSE END IF (IF USER HAS ENTERED SURNAME)
+
+    #ASKING USER TO ENTER EMAIL
+    IF email == NONE
+       ASK USER TO ENTER EMAIL
+    ELSE END IF (IF USER HAS ENTERED EMAIL)
+
+        #ASKING USER TO ENTER PHONE NUMBER
+        IF phone number == NONE
+           ASK USER TO ENTER PHONE NUMBER
+        ELSE END IF (IF USER HAS ENTERED PHONE)
+           
+           #ASKING USER TO SELECT JOB TITLE
+             IF Job Title == NONE
+                ASK USER TO SELCT THE JOB TITLE
+             ELSE END IF (IF USER HAS SELECTED JOB TITLE)
+           
+                #ASKING USER FOR CV
+                IF CV == NONE
+                  ASK USER FOR CV
+                ELSE END IF (IF USER HAS SUBMITTED CV)
+                     
+                    # IF USER HAS ENTERED EVERYTHING CORRECTLY
+                    IF USER CLICKS SUBMITS
+                      SEND FORM TO COMPANY EMAIL
+                      RESTART FORM
+
+
+            
+           
+    
+  

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Hot Beans, web development, programming, apply, jobs, senior, junior, full-stack, web developer, developer, salary, application">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="apply.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--Image for the tab bar-->
+        <link rel="icon" href="../hotbeanslogo/HotBeansLogo.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--creating background for page-->
+        <style>
+            body, html {
+                height: 75%;
+                margin: 0;
+            }
+    
+            .background {
+                background-image: url(../hotbeansjobpage/JobPagebg.jpg);
+    
+                padding-top: 450px;
+    
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+    
+            }
+    
+           </style>
+    </head>
+    <title>
+       Apply
+    </title>
+    <body>
+        <!--Creating navigation bar-->
+        <div class="resnav" id="myResNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="courses.html">Courses</a>
+            <a href="apply.html">Apply</a>
+            <a href="contact.html">Contact Us</a>
+            <img src="../hotbeanslogo/HotBeansLogo.png" id="logo" width="80px" style="float: right;">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+         </div>
+        
+          <!--Creating script to create a responsive navigation bar for the mobile phone-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myResNav");
+                if (x.className === "resnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "resnav";
+                }
+            }
+         </script>
+
+         <div class= "container">
+            <div class="background">
+                <h1 id="text" style="color: white;">Apply</h1>
+            </div>
+             
+            <!--First image with description of a back-end developer -->
+            <div class="img">
+                <img src="../hotbeansjobpage/Back-End Developer-img.png" width="200px;">
+                <p>
+                    Unlike a front-end developer, a back-end developer ensures that the website is performing properly by handling databases, application programming, architecture, and servers. 
+                    Python is an example of a back-end programming language used for websites. 
+                    The average salary for a back-end developer is £57,500. 
+                </p>
+                   
+            </div>
+            
+            <!--Second image with description of a front-end developer -->
+            <div class="img">
+                <img src="../hotbeansjobpage/Full-Stack Developer-img.png" width="200px;"> 
+                <p>
+                    Full-Stack Developer is someone who can work at the front-end and the back-end of the website. 
+                    Full-stack Developers have knowledge on HTML, CSS and Javascript for front-end development 
+                    and have knowledge on Python and SQL for back-end development.  
+                    Full-Stack Developers earn £35,000 to £77,500 a year.
+                </p>
+            </div>
+            
+            <!-- Third image with description of a front-end developer -->
+            <div class="img">
+                <img src="../hotbeansjobpage/Front-end Developer-img.jpg" width= "300px;">
+                <p>
+                    A front-end developer is someone who creates websites or applications with the use of HTML, CSS and JavaScript to allow the user to interact with the website. 
+                    This is everything the user can see on the website. Front-end developers have an average salary of £51,221 per month.
+                </p>
+            </div>
+         </div>
+
+         <h1 style="text-align: center;">Application Form</h1>
+
+        <!--Creating a form for the user to apply for the jobs-->
+         <div class="form">
+            <form name="Form" onsubmit="validateForm()">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                
+                <label for="number">Number</label>
+                <input type="number" id="number" name="number" placeholder="Number..." maxlength="11" >
+                
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email..."> 
+                
+                <!--Options for Jobs-->
+                <label for="job">Job</label>
+                <select id="job" name="job">
+                    <option value="Select">Select</option>
+                    <option value="Back-end Developer">Back-End Developer</option>
+                    <option value="Front-end Developer">Front-end Developer</option>
+                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                </select>
+
+                <label for="CV">CV</label>
+                <input type="file" value="CV..." id="CV" name="CV">
+
+                <input type="submit" value="Submit" onsubmit="validateForm()">
+            </form>
+         </div>    
+            <!--Script to validate the form and prevent user from leaving field blank -->  
+            <script>
+                function validateForm() {
+                    let first_name = document.forms["Form"]["fname"].value;
+                    let last_name = document.forms["Form"]["lname"].value;
+                    let number = document.forms["Form"]["number"].value;
+                    let email = document.forms["Form"]["email"].value;
+                    let job = document.forms["Form"]["job"].value;
+                    let CV = document.forms["Form"]["CV"].value;
+
+                    if (first_name == "") {
+                        alert("First Name must be filled out!");
+                        return false;
+                    }else if (last_name == "") {
+                        alert("Last Name must be filled out!")
+                        return false;
+                    }else if (number == "") {
+                        alert("Number must be filled!");
+                        return false;
+                    }else if (email == "") {
+                        alert("Email must be filled!");
+                        return false;
+                    }else if (job == "Select") {
+                        alert("Please Enter Job Title!");
+                        return false;
+                    }else if (CV == "") {
+                        alert("CV must be filled!");
+                        return false;
+                    }  
+                }
+            </script>
+                <!--Creating a footer-->
+                <div class="footer">
+                    <h2 class="footer-header">
+                        More From Us
+                    </h2>
+                    
+                    <!--Moving the text to the left side of footer-->
+                    <p class="footer-text-left">
+                        <!--Links to other social media pages-->
+                        <a href="https://twitter.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="border: none;">
+                            <i class="fa fa-twitter" style="color: white; font-size: 48px;"></i>
+                    </a> 
+
+                    <a href="https://www.facebook.com/RickandMorty/?locale=en_GB" style="border: none;">
+                        <i class="fa fa-facebook" style="color: white; font-size: 48px;" ></i>
+                    </a> 
+
+                    <a href="https://www.instagram.com/rickandmorty/" style="border: none;">
+                        <i class="fa fa-instagram" style="color: white; font-size: 48px;"></i>
+                    </a> 
+
+                    <a href="https://www.twitch.tv/" style="border: none;" >
+                        <i class="fa fa-twitch" style="color: white; font-size: 48px;"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/" style="border: none;" >
+                        <i class="fa fa-youtube-play" style="color: white; font-size: 48px;"></i>
+                    </a>
+                        <!--Links to other pages-->
+                        <a href="index.html" class="menu">Home</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="courses.html">Courses</a>
+                        <a href="apply.html">Apply</a>
+                        <a href="contact.html" style="word-spacing: 0px;">Contact Us</a>
+                        <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" style="word-spacing: 0px;" class="endtext">Learn to Code</a>
+                    </p>
+                    
+                    <!--Creating trademark name for Hot Beans-->
+                    <p class="footer-copyright">Copyright <i class="fa fa-copyright"></i> 2023 Hot Beans <i class="fa fa-trademark"></i></p>
+                </div>
+        </div>
+    </body>
+</html>
